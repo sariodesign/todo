@@ -1,0 +1,18 @@
+main {
+    background-color: $color-dark-blue;
+    
+    @media (min-width: $laptop) {
+        background-color: $color-night-blue;
+    }
+}
+
+.intro {
+    padding: 40px 35px 0;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+}

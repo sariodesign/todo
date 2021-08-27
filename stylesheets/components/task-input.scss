@@ -1,0 +1,36 @@
+.task-input {
+    align-items: center;
+    background-color: $color-night-blue;
+    border-radius: 12px;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 8px 16px;
+
+    &__text {
+        background-color: transparent;
+        border: 0;
+        color: #fff;
+        font-family: $font-medium;
+        font-weight: 500;
+        height: 32px;
+        margin-right: auto;
+        padding: 4px;
+
+        &::placeholder {
+            color: $color-gray-blue;
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    .toggle {
+        @media (min-width: $laptop) {
+            margin-right: 60px;
+        }
+    }
+}

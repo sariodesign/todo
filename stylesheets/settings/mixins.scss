@@ -1,0 +1,63 @@
+@use "sass:math";
+
+@mixin toggle() {
+    $height: 32px;
+    $width: 60px;
+
+    position: relative;
+    height: $height;
+    width: $width;
+
+    &:hover {
+        .toggle-state {
+            background-color: $color-dark-blue3
+        }
+    }
+    
+    .toggle-state {
+        background-color: $color-dark-blue2;
+        border-radius: 14px;
+        left: 0;
+        position: relative;
+        top: 0;
+        height: $height;
+        width: $width;
+
+        &:after {
+            background-color: $color-gray-blue;
+            border-radius: 50%;
+            cursor: pointer;
+            content: '';
+            left: 3px;
+            height: 26px;
+            pointer-events: none;
+            position: absolute;
+            top: 3px;
+            transition: all .3s ease-in-out;
+            width: 26px;
+            z-index: 1;
+        }
+    }
+
+    .toogle-checkbox {
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+
+        &:checked + .toggle-state {
+            background-color: $color-dark-blue2;
+        }
+
+        &:checked + .toggle-state:after {
+            background-color: $color-light-blue;
+            left: 29px;
+        }
+    }
+
+}

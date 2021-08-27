@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+<body>
+
+    <main>
+
+        <div class="intro">
+            <h1 class="heading1">MY TRACK</h1>
+        </div>
+
+        <section class="todo-container">
+            <h2 class="heading2">New task</h2>
+            <div class="task-input">
+                <input class="task-input__text js-task-text" type="text" placeholder="Add task..." />
+                <div class="toggle">
+                    <input class="toogle-checkbox js-task-priority" type="checkbox" />
+                    <div class="toggle-state"></div>
+                </div>
+                <button class="btn btn--primary js-add-task">Add</button>
+            </div>
+            <div class="section-title">
+                <h2 class="heading2">In progress <span class="todo__counter js-task-count"></span></h2>
+            </div>
+            <div class="todo">
+                <ul class="todo__list js-todo-list"></ul>
+            </div>
+            <div class="section-title">
+                <h2 class="heading2">Done<span class="todo__counter js-task-count"></span></h2>
+            </div>
+            <div class="todo">
+                <ul class="todo__list js-todo-list"></ul>
+            </div>
+        </section>
+
+        <aside class="navigation">
+            <nav class="navigation__tab">
+                Navigation
+            </nav>
+        </aside>
+        
+    </main>
+  
+    <script src="index.js"></script>
+    
+</body>
+</html>
