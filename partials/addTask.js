@@ -1,22 +1,17 @@
 import createTask from "./createTask";
 
-const taskInput = document.querySelector(".js-task-text");
-const taskPriority = document.querySelector(".js-task-priority");
+const addTask = (inputText, inputPriority, todoContainer) => {
+  let classNameList = [];
+  inputPriority.checked
+    ? classNameList.push("todo__item", "todo__item--priority")
+    : classNameList.push("todo__item");
 
-const addTask = (todoContainer) => {
-  let classList = [];
-  taskPriority.checked
-    ? classList.push("todo__item", "todo__item--priority")
-    : classList.push("todo__item");
-  todoContainer.appendChild(createTask(taskInput.value, classList));
-  taskInput.value = null;
-  taskPriority.checked = false;
-
-  taskInput.addEventListener("keypress", (e) => {
-    if (e.keyCode === 13) {
-      addTask(todoContainer);
-    }
-  });
+  if(inputText) {
+    console.log(inputText.value);
+    todoContainer.appendChild(createTask(inputText.value, classNameList));
+    inputText.value = null;
+    inputPriority.checked = false;
+  }
 };
 
 export default addTask;

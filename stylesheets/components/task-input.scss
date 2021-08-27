@@ -6,7 +6,6 @@
     height: 60px;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 400px;
     padding: 8px 16px;
 
     &__text {
@@ -14,6 +13,7 @@
         border: 0;
         color: #fff;
         font-family: $font-medium;
+        font-size: 16px;
         font-weight: 500;
         height: 32px;
         margin-right: auto;

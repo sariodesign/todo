@@ -10,9 +10,11 @@ const createTask = (text, classes) => {
   if(text) {
     todoItem.textContent = text;
     todoItem.appendChild(deleteTask());
+
+    return todoItem;
+  } else {
+    return null;
   }
-  
-  return todoItem;
 };
 
 export default createTask;

@@ -1,7 +1,8 @@
 import * as icon from "./icons";
 
-const deleteItem = (tag, classes) => {
-  let deleteNode = document.createElement(tag);
+const deleteItem = () => {
+  let deleteNode = document.createElement('div');
+  deleteNode.classList.add("todo__icon","js-delete");
   deleteNode.insertAdjacentHTML("beforeend", icon.delete);
   return deleteNode;
 };
