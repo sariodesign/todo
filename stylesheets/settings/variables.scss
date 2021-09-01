@@ -6,7 +6,14 @@ $color-dark-blue2: #212944;
 $color-dark-blue3: #27334F;
 $color-gray-blue: #425277;
 $color-night-blue: #141B2C;
+$color-night-blue2: #1F2942;
 $color-light-blue: #CBDDF0;
+$color-light-blue2: #A9C8E8;
+$color-light-blue3: #4788c7;
+$color-light-blue4: #74ACE2;
+
+$color-active: $color-light-blue3;
+$color-active-hover: $color-light-blue4;
 
 // FONTS
 $font-bold: 'Poppins Bold';
@@ -21,3 +28,16 @@ $desktop: 1440px;
 
 // SPACING
 $base-space-bottom: 30px;
+
+// PLACEHOLDER
+%block-item {
+    align-items: center;
+    background-color: $color-night-blue;
+    border-radius: 12px;
+    color: $color-light-blue;
+    display: flex;
+    font-family: $font-medium;
+    font-weight: 500;
+    min-height: 60px;
+    padding: 8px 0;
+}

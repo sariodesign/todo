@@ -1,3 +1,4 @@
+import completeTask from "./completeTask";
 import deleteTask from "./deleteTask";
 
 const createTask = (text, classes) => {
@@ -8,9 +9,12 @@ const createTask = (text, classes) => {
     }
   }
   if(text) {
-    todoItem.textContent = text;
+    let todoItemText = document.createElement("span")
+    todoItemText.classList.add("todo__text");
+    todoItemText.textContent = text;
+    todoItem.appendChild(completeTask());
+    todoItem.appendChild(todoItemText);
     todoItem.appendChild(deleteTask());
-
     return todoItem;
   } else {
     return null;

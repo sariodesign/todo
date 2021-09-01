@@ -1,14 +1,18 @@
 .btn {
     background-color: transparent;
     border: 0;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    font-family: $font-medium;
+    font-size: 14px;
+    height: 40px;
     padding: 8px 12px;
     text-align: center;
     text-transform: uppercase;
+    width: 90px;
 
     &--primary {
-        background: blue;
-        color: #fff;
+        background: $color-gray-blue;
+        color: $color-light-blue;
     }
 }

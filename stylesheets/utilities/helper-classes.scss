@@ -1,0 +1,11 @@
+.hidden-only-mobile {
+    @media (max-width: $tablet - 1) {
+        display: none
+    }
+}
+
+.hidden-from-tablet {
+    @media (min-width: $tablet) {
+        display: none;
+    }
+}

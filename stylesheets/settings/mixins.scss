@@ -1,20 +1,31 @@
-@use "sass:math";
-
 @mixin toggle() {
     $height: 32px;
     $width: 60px;
 
+    align-items: center;
+    display: flex;
     position: relative;
     height: $height;
-    width: $width;
 
     &:hover {
-        .toggle-state {
+        .toggle__state {
             background-color: $color-dark-blue3
         }
     }
+
+    &__label {
+        color: $color-light-blue;
+        font-family: $font-regular;
+        font-size: 12px;
+        margin-right: 10px;
+        white-space: nowrap;
+
+        @media (min-width: $tablet) {
+            margin-right: 20px;
+        }
+    }
     
-    .toggle-state {
+    &__state {
         background-color: $color-dark-blue2;
         border-radius: 14px;
         left: 0;
@@ -39,7 +50,7 @@
         }
     }
 
-    .toogle-checkbox {
+    &__checkbox {
         -webkit-appearance: none;
         appearance: none;
         cursor: pointer;
@@ -50,11 +61,11 @@
         width: 100%;
         z-index: 1;
 
-        &:checked + .toggle-state {
+        &:checked + .toggle__state {
             background-color: $color-dark-blue2;
         }
 
-        &:checked + .toggle-state:after {
+        &:checked + .toggle__state:after {
             background-color: $color-light-blue;
             left: 29px;
         }

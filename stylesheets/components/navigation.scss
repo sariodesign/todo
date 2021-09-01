@@ -1,0 +1,46 @@
+.navigation {
+    background-color: $color-night-blue;
+    bottom: 0;
+    display: flex;
+    height: 60px;
+    left: 0;
+    padding: 0 35px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__tab-item {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        svg {
+            fill: $color-light-blue2;
+            margin-bottom: 5px;
+        }
+
+        span {
+            color: $color-light-blue2;
+            font-family: $font-medium;
+            font-size: 8px;
+            font-weight: 500;
+        }
+
+        &.is-active {
+            svg {
+                fill: #fff;
+            }
+
+            span {
+                color: #fff;
+            }
+        }
+    }
+}

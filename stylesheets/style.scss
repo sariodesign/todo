@@ -5,13 +5,17 @@
 @import 'settings/fonts';
 
 // OBJECTS
-@import 'objects/button.scss';
-@import 'objects/layout.scss';
-@import 'objects/toggle.scss';
-@import 'objects/typography.scss';
+@import 'objects/button';
+@import 'objects/icons';
+@import 'objects/layout';
+@import 'objects/toggle';
+@import 'objects/typography';
 
 // COMPONENTS
+@import 'components/modal';
+@import 'components/navigation';
 @import 'components/task-input';
 @import 'components/todo';
 
 // UTILITIES
+@import 'utilities/helper-classes';

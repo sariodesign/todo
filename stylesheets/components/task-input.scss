@@ -1,23 +1,38 @@
+.task-input-action {
+    @extend %block-item;
+    justify-content: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet) {
+        display: none;
+    }
+}
+
 .task-input {
+    @extend %block-item;
     align-items: center;
-    background-color: $color-night-blue;
-    border-radius: 12px;
-    display: flex;
-    height: 60px;
+    display: none;
     justify-content: space-between;
     margin: 0 auto;
     padding: 8px 16px;
 
+    @media (min-width: $tablet) {
+        display: flex;
+        margin-bottom: 40px;
+    }
+
     &__text {
         background-color: transparent;
         border: 0;
-        color: #fff;
+        color: $color-light-blue;
         font-family: $font-medium;
         font-size: 16px;
         font-weight: 500;
         height: 32px;
         margin-right: auto;
         padding: 4px;
+        width: 100%;
 
         &::placeholder {
             color: $color-gray-blue;
@@ -25,11 +40,39 @@
 
         &:focus-visible {
             outline: none;
+
+            & ~ button.btn {
+                background-color: $color-active;
+
+                &:hover {
+                    background-color: $color-active-hover;
+                }
+            }
+        }
+
+        &:focus ~ button.btn,
+        &:focus ~ .modal__actions button.btn {
+            background-color: $color-active;
+
+            &:hover {
+                background-color: $color-active-hover;
+            }
+        }
+
+        .modal & {
+            display: block;
+            font-size: 18px;
+            margin: 0 auto 35px;
+            max-width: calc(100% - 50px);
         }
     }
 
+    &__label {
+        margin: 4px 4px 0 0;
+    }
+
     .toggle {
-        @media (min-width: $laptop) {
+        @media (min-width: $tablet) {
             margin-right: 60px;
         }
     }
