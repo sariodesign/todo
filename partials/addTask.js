@@ -9,7 +9,7 @@ const addTask = (inputText, inputPriority, todoContainer, numberTasks) => {
 
   if(inputText) {
     todoContainer.appendChild(createTask(inputText.value, classNameList));
-    inputText.value = null;
+    inputText.value = "";
     inputPriority.checked = false;
   }
 

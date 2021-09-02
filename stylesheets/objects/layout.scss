@@ -4,12 +4,22 @@ main {
     
     @media (min-width: $laptop) {
         background-color: $color-night-blue;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 120px auto;
     }
 }
 
 .intro {
     padding: 40px 35px 0;
     margin-bottom: 40px;
+
+    @media (min-width: $laptop) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        margin: 0;
+        padding: 40px 55px 0;
+    }
 }
 
 .section-title {
@@ -19,5 +29,24 @@ main {
 
     @media (min-width: $tablet) {
         margin-bottom: 10px;
+    }
+}
+
+.todo-container {
+    background-color: $color-dark-blue;
+    padding: 0 35px;
+
+    @media (min-width: $laptop) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        margin: 0;
+        padding: 40px 35px 0;
+    }
+}
+
+.todo-inner {
+    @media (min-width: $laptop) {
+        margin: 0 auto;
+        max-width: 810px;
     }
 }

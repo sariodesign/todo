@@ -40,6 +40,10 @@
     <path d="M5 13h6v6c0 0.552 0.448 1 1 1s1-0.448 1-1v-6h6c0.552 0 1-0.448 1-1s-0.448-1-1-1h-6v-6c0-0.552-0.448-1-1-1s-1 0.448-1 1v6h-6c-0.552 0-1 0.448-1 1s0.448 1 1 1z"></path>
   </symbol>
   
+  <symbol id="icon-check" viewBox="0 0 10 10">
+    <path d="M8.438 1.25l-4.688 4.688-2.188-2.188-1.563 1.563 3.75 3.75 6.25-6.25z" fill="#fff"></path>
+  </symbol>
+  
 </svg>
 
 
@@ -52,33 +56,35 @@
         </div>
 
         <section class="todo-container">
-            <div class="task-input-action hidden-from-tablet js-open-modal">
-                <span class="task-input__label">New task</span>
-                <svg class="icon icon--medium icon--fill-light-blue2"><use xlink:href="#icon-add"></use></svg>
-            </div>
-            <div class="section-title hidden-only-mobile">
-                <h2 class="heading2">New task</h2>
-            </div>
-            <div class="task-input">
-                <input class="task-input__text js-task-text" type="text" placeholder="Add task..." />
-                <div class="toggle">
-                    <label class="toggle__label">High priority</label>
-                    <input class="toggle__checkbox js-task-priority" type="checkbox" />
-                    <div class="toggle__state"></div>
+            <div class="todo-inner">
+                <div class="task-input-action hidden-from-tablet js-open-modal">
+                    <span class="task-input__label">New task</span>
+                    <svg class="icon icon--medium icon--fill-light-blue2"><use xlink:href="#icon-add"></use></svg>
                 </div>
-                <button class="btn btn--primary js-add-task">Add</button>
-            </div>
-            <div class="section-title">
-                <h2 class="heading2">In progress <span class="todo__counter js-progress-count"></span></h2>
-            </div>
-            <div class="todo">
-                <ul class="todo__list js-todo-list"></ul>
-            </div>
-            <div class="section-title">
-                <h2 class="heading2">Done<span class="todo__counter js-complete-count"></span></h2>
-            </div>
-            <div class="todo">
-                <ul class="todo__list js-complete-list"></ul>
+                <div class="section-title hidden-only-mobile">
+                    <h2 class="heading2">New task</h2>
+                </div>
+                <div class="task-input">
+                    <input class="task-input__text js-task-text" type="text" placeholder="Add task..." />
+                    <div class="toggle">
+                        <label class="toggle__label">High priority</label>
+                        <input class="toggle__checkbox js-task-priority" type="checkbox" />
+                        <div class="toggle__state"></div>
+                    </div>
+                    <button class="btn btn--primary js-add-task">Add</button>
+                </div>
+                <div class="section-title">
+                    <h2 class="heading2">In progress <span class="todo__counter js-progress-count">0</span></h2>
+                </div>
+                <div class="todo">
+                    <ul class="todo__list js-todo-list"></ul>
+                </div>
+                <div class="section-title">
+                    <h2 class="heading2">Done<span class="todo__counter js-complete-count">0</span></h2>
+                </div>
+                <div class="todo">
+                    <ul class="todo__list js-complete-list"></ul>
+                </div>
             </div>
         </section>
 
@@ -125,6 +131,24 @@
                     <div class="toggle__state"></div>
                 </div>
                 <button class="btn btn--primary js-add-task">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal--update js-modal-update">
+        <div class="modal__inner">
+            <div class="modal__head">
+                <h3 class="modal__label">Task</h3>
+                <span class="modal__close js-close-modal">
+                    <svg class="icon icon--small icon--fill-light-blue2"><use xlink:href="#icon-add"></use></svg>
+                </span>
+            </div>
+            <p class="modal__text js-task-description"></p>
+            <div class="modal__actions">
+                <div class="todo__icon js-modal-delete">
+                    <svg class="icon icon--fill-red"><use xlink:href="#icon-trash"></use></svg>
+                </div>
+                <button class="btn btn--success js-modal-complete">Complete</button>
             </div>
         </div>
     </div>

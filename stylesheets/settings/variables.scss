@@ -1,6 +1,7 @@
 // COLORS
 $color-black: #020713;
 $color-red: #CD5050;
+$color-green: #82C94E;
 $color-dark-blue: #202A43;
 $color-dark-blue2: #212944;
 $color-dark-blue3: #27334F;
@@ -40,4 +41,17 @@ $base-space-bottom: 30px;
     font-weight: 500;
     min-height: 60px;
     padding: 8px 0;
+}
+
+%priority-dot {
+    background-color: $color-gray-blue;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    left: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
 }

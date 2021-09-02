@@ -12,7 +12,7 @@
             content: 'No task here';
             font-family: $font-medium;
             font-weight: 500;
-            padding-left: 16px;
+            padding: 8px 0 0 16px;
         }
     }
 
@@ -23,8 +23,14 @@
         padding: 8px 15px;
         transition: all .25s ease-in-out;
 
-        &:hover {
-            box-shadow: 0 8px 18px 0 rgba(0,0,0,.16);
+        @media (hover: hover) {
+            &:hover {
+                box-shadow: 0 8px 18px 0 rgba(0,0,0,.16);
+
+                > div.todo__icon {
+                    opacity: 1;
+                }
+            }
         }
 
         &--priority {
@@ -39,9 +45,21 @@
         margin: 0;
         height: 20px;
         width: 20px;
+        
+        @media (hover: hover) {
+            &:hover {
+                background-color: $color-dark-blue3;
+                cursor: pointer;
+            }
+        }
 
-        &:hover {
-            background-color: $color-dark-blue3;
+        .todo__item--completed & {
+            background-color: $color-green;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M8.438 1.25l-4.688 4.688-2.188-2.188-1.563 1.563 3.75 3.75 6.25-6.25z' fill='%23fff'%3E%3C/path%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 10px;
+            box-shadow: none;
         }
     }
 
@@ -49,12 +67,18 @@
         cursor:pointer;
         display: none;
 
-        @media (min-width: $tablet) {
-            display: inline-block
+        @media (min-width: $laptop) {
+            display: inline-block;
+            transition: opacity .25s ease-in-out;
+            opacity: 0;
         }
         
         svg {
             pointer-events: none;
+        }
+
+        .modal & {
+            display: block;
         }
     }
     
@@ -64,8 +88,10 @@
         border-radius: 50%;
         color: $color-dark-blue;
         display: inline-flex;
+        font-size: 12px;
         height: 20px;
         justify-content: center;
+        margin-left: 10px;
         padding-top: 4px;
         width: 20px;
 
@@ -85,25 +111,20 @@
         position: relative;
 
         &:before {
-            background-color: $color-gray-blue;
-            border-radius: 50%;
-            content: '';
-            display: inline-block;
-            height: 10px;
-            left: 10px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 10px;
+            @extend %priority-dot;
 
             .todo__item--priority & {
                 background-color: $color-red;
             }
         }
-    }
-}
 
-.todo-container {
-    background-color: $color-dark-blue;
-    padding: 0 35px;
+        @media (min-width: $laptop) {
+            font-size: 16px;
+        }
+
+        .todo__item--completed & {
+            color: $color-gray-blue;
+            text-decoration: line-through;
+        }
+    }
 }
