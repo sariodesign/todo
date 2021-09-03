@@ -21,10 +21,11 @@
         order: 2;
         margin-bottom: 10px;
         padding: 8px 15px;
+        animation: .7s  1 forwards entryAnimation;
         transition: all .25s ease-in-out;
 
         @media (hover: hover) {
-            &:hover {
+            &:not(.todo__item--completed):hover {
                 box-shadow: 0 8px 18px 0 rgba(0,0,0,.16);
 
                 > div.todo__icon {

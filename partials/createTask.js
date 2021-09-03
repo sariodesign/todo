@@ -8,16 +8,14 @@ const createTask = (text, classes) => {
       todoItem.classList.add(classes[className]);
     }
   }
-  if(text) {
+  if(text.trim() != "") {
     let todoItemText = document.createElement("span")
     todoItemText.classList.add("todo__text");
-    todoItemText.textContent = text;
+    todoItemText.textContent = text.trim();
     todoItem.appendChild(completeInput());
     todoItem.appendChild(todoItemText);
     todoItem.appendChild(deleteTask());
     return todoItem;
-  } else {
-    return null;
   }
 };
 

@@ -55,3 +55,51 @@ $base-space-bottom: 30px;
     transform: translateY(-50%);
     width: 10px;
 }
+
+// KEYFRAMES
+@keyframes entryAnimation {
+    0% {
+       transform: rotateX(60deg)  translateY(-20px);
+       opacity: 0;
+    }
+    10%{
+        transform: rotateX(52deg)  translateY(-16px);
+        opacity: .15;
+    }
+    20% {
+        transform: rotateX(44deg)  translateY(-12px);
+        opacity: .35;
+    }
+    30% {
+        transform: rotateX(36deg)  translateY(-8px);
+        opacity: .55;
+    }
+    40% {
+        transform: rotateX(28deg)  translateY(-4px);
+        opacity: .75;
+    }
+    50% {
+        transform: rotateX(20deg)  translateY(0px);
+        opacity: 1;
+    }
+    60% {
+        transform: rotateX(14deg)  translateY(0px);
+        opacity: 1;
+    }
+    70% {
+        transform: rotateX(8deg)  translateY(0px);
+        opacity: 1;
+    }
+    80% {
+        transform: rotateX(4deg)  translateY(0px);
+        opacity: 1;
+    }
+    90% {
+        transform: rotateX(2deg)  translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(0deg)  translateY(0px);
+        opacity: 1;
+    }
+  }

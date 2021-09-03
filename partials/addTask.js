@@ -1,4 +1,5 @@
 import createTask from "./createTask";
+import errorMessage from "./errorMessage";
 import counterTask from "./counterTask";
 
 const addTask = (inputText, inputPriority, todoContainer, numberTasks) => {
@@ -7,8 +8,16 @@ const addTask = (inputText, inputPriority, todoContainer, numberTasks) => {
     ? classNameList.push("todo__item", "todo__item--priority")
     : classNameList.push("todo__item");
 
-  if(inputText) {
+  if(inputText.value.trim()) {
     todoContainer.appendChild(createTask(inputText.value, classNameList));
+    inputText.value = "";
+    inputPriority.checked = false;
+    if(document.querySelector(".task-input__error-msg")){
+      document.querySelector(".task-input__error-msg").remove();
+    }     
+  } else {
+    let parentInput = inputText.parentNode;
+    parentInput.insertBefore(errorMessage("Add some text..."), inputText);
     inputText.value = "";
     inputPriority.checked = false;
   }

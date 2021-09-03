@@ -18,6 +18,7 @@
         padding: 0 35px 40px;
         position: sticky;
         top: 120px;
+        max-height: calc(100vh - 120px);
     }
 
     &__tabs {
@@ -58,19 +59,6 @@
             }
         }
 
-        span {
-            color: $color-light-blue2;
-            font-family: $font-medium;
-            font-size: 8px;
-            font-weight: 500;
-
-            @media (min-width: $laptop) {
-                font-family: $font-semi-bold;
-                font-size: 16px;
-                margin-top: 4px;
-            }
-        }
-
         &.is-active {
 
             @media (min-width: $laptop) {
@@ -81,10 +69,62 @@
             svg {
                 fill: #fff;
             }
+        }
+    }
 
-            span {
-                color: #fff;
+    &__tab-name {
+        color: $color-light-blue2;
+        font-family: $font-medium;
+        font-size: 8px;
+        font-weight: 500;
+
+        @media (min-width: $laptop) {
+            font-family: $font-semi-bold;
+            font-size: 16px;
+            margin-top: 4px;
+        }
+
+        .is-active & {
+            color: #fff;
+        }
+    }
+
+    &__counter {
+        display: none;
+
+        @media (min-width: $laptop) {
+            align-items: center;
+            background-color: #fff;
+            display: flex;
+            border-radius: 10px;
+            height: 20px;
+            justify-content: center;
+            margin-left: auto;
+            width: 40px;
+
+            &.is-empty {
+                display: none;
             }
         }
+    }
+
+    &__completed-task {
+        color: $color-dark-blue;
+        font-family: $font-medium;
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 4px;
+
+        &:after {
+            content: "/";
+        }
+    }
+
+    &__total-task {
+        color: $color-dark-blue;
+        font-family: $font-medium;
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 4px;
     }
 }

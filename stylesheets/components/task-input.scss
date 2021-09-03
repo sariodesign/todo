@@ -16,6 +16,7 @@
     justify-content: space-between;
     margin: 0 auto;
     padding: 8px 16px;
+    position: relative;
 
     @media (min-width: $tablet) {
         display: flex;
@@ -67,12 +68,27 @@
         }
     }
 
+    &__error-msg {
+        bottom: -20px;
+        color: $color-red;
+        font-family: $font-medium;
+        font-size: 12px;
+        font-weight: 500;
+        left: 16px;
+        position: absolute;
+
+        &:empty {
+            display: none;
+        }
+    }
+
     &__label {
         margin: 4px 4px 0 0;
     }
 
     .toggle {
         @media (min-width: $tablet) {
+            margin-left: 10px;
             margin-right: 60px;
         }
     }
