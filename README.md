@@ -15,7 +15,7 @@ Deployed the build on [Vercel](https://vercel.com/).
 ## Image preview
 
 ### Mobile version
-![todo mobile version](image.jpg)
+![todo mobile version](todo-mobile-preview.png)
 
 ### Desktop version
 ![todo desktop version](image.jpg)
