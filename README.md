@@ -15,11 +15,10 @@ Deployed the build on [Vercel](https://vercel.com/).
 ## Image preview
 
 ### Mobile version
-![todo mobile version](image.jpg)
+<img src="todo-mobile-preview.png" width="320" alt="todo mobile version"/>
 
 ### Desktop version
-![todo desktop version](image.jpg)
-
+<img src="todo-desktop-preview.png" width="640" alt="todo desktop version"/>
 
 ## Local preview
 For see the project on your machine:
