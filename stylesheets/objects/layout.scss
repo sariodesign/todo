@@ -36,7 +36,7 @@ main {
 
 .todo-container {
     background-color: $color-dark-blue;
-    padding: 0 35px;
+    padding: 0 35px 60px;
 
     @media (min-width: $laptop) {
         grid-column: 2 / 3;
