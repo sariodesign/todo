@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/sariodesign/todo#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.0.0",
     "sass": "^1.38.1"
   }
 }
