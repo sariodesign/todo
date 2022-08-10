@@ -7,6 +7,7 @@ const toDoList         = document.querySelector(".js-todo-list");
 const completeList     = document.querySelector(".js-complete-list");
 const addToDoBtn       = document.querySelectorAll(".js-add-task");
 const taskInput        = document.querySelectorAll(".js-task-text");
+const taskDeadline     = document.querySelectorAll(".js-task-deadline");
 const taskPriority     = document.querySelectorAll(".js-task-priority");
 const addTaskModal     = document.querySelector(".js-modal");
 const updateTaskModal  = document.querySelector(".js-modal-update");
@@ -42,7 +43,7 @@ closeModalBtn.forEach((closeBtn) => {
 addToDoBtn.forEach( (btn, index) => {
   btn.addEventListener("click", () => {
     let taskTextValue = taskInput[index].value;
-    addTask(taskInput[index], taskPriority[index], toDoList, counterProgress);
+    addTask(taskInput[index], taskPriority[index], taskDeadline[index], toDoList, counterProgress);
     if(modalVisible && taskTextValue.trim() != ""){
       removeSelector(addTaskModal, 'is-visible');
     }
@@ -85,7 +86,9 @@ toDoList.addEventListener("click", (e) => {
   } else if(e.target.classList.contains("js-complete")){
     // Move task to done list
     let taskComplete = e.target.closest(".todo__item");
-    taskComplete.remove();
+    taskComplete.lastElementChild.remove();
+    console.log('Completed task', taskComplete);
+    //taskComplete.removeChild();
     taskComplete.classList.add("todo__item--completed");
     completeList.appendChild(taskComplete);
     counterTask(toDoList, counterProgress);
