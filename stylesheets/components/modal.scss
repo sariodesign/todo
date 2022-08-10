@@ -25,7 +25,10 @@
     &__inner {
         background-color: $color-night-blue;
         border-radius: 12px;
+        display: flex;
+        flex-direction: column;
         margin: 0 auto;
+        min-height: 60vh;
         position: relative;
         top: 100px;
         width: calc(100% - 70px);
@@ -80,6 +83,7 @@
         align-items: center;
         display: flex;
         justify-content: space-between;
-        padding: 0 25px 20px;
+        margin-top: auto;
+        padding: 10px 25px 20px;
     }
 }

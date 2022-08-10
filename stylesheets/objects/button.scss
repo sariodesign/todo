@@ -10,6 +10,10 @@
     padding: 8px 12px;
     text-align: center;
     text-transform: uppercase;
+
+    &:hover {
+        opacity: .9;
+    }
     
     &--primary {
         background: $color-gray-blue;

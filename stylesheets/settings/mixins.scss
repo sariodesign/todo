@@ -2,10 +2,15 @@
     $height: 32px;
     $width: 60px;
 
-    align-items: center;
     display: flex;
+    flex-direction: column;
     position: relative;
-    height: $height;
+
+    @media (min-width: $tablet) {
+        align-items: center;
+        flex-direction: row;
+        height: $height;
+    }
 
     &:hover {
         .toggle__state {
@@ -17,11 +22,11 @@
         color: $color-light-blue;
         font-family: $font-regular;
         font-size: 12px;
-        margin-right: 10px;
+        margin: 0 0 8px;
         white-space: nowrap;
 
         @media (min-width: $tablet) {
-            margin-right: 20px;
+            margin: 0 8px 0 0;
         }
     }
     

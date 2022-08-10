@@ -62,8 +62,10 @@
 
         .modal & {
             display: block;
+            flex-grow: 1;
             font-size: 18px;
-            margin: 0 auto 35px;
+            height: auto;
+            margin: 0 auto;
             max-width: calc(100% - 50px);
         }
     }
@@ -89,7 +91,7 @@
     .toggle {
         @media (min-width: $tablet) {
             margin-left: 10px;
-            margin-right: 60px;
+            margin-right: 30px;
         }
     }
 }

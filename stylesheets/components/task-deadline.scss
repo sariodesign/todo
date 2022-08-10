@@ -1,0 +1,59 @@
+.task-deadline {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto 10px;
+    position: relative;
+    width: calc(100% - 50px);
+
+    @media (min-width: $tablet) {
+        justify-content: flex-start;
+        margin-bottom: 0;
+        width: auto;
+    }
+
+    &__label {
+        color: $color-light-blue;
+        cursor: pointer;
+        font-family: Poppins Regular;
+        font-size: 12px;
+        margin-right: 10px;
+        white-space: nowrap;
+    }
+
+    &__input {
+        -webkit-appearance: none;
+        appearance: none;
+        right: 0;
+        height: 20px;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: auto;
+
+        @media (min-width: $tablet) {
+            left: 0;
+            width: 100%;
+        }
+
+        &::-webkit-calendar-picker-indicator {
+            background: transparent;
+            bottom: 0;
+            color: transparent;
+            cursor: pointer;
+            height: auto;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: auto;
+        }
+    }
+
+    &__icon {
+        fill: $color-light-blue;
+        height: 20px;
+        pointer-events: none;
+        width: 20px;
+    }
+}
