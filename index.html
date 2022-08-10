@@ -43,6 +43,14 @@
   <symbol id="icon-check" viewBox="0 0 10 10">
     <path d="M8.438 1.25l-4.688 4.688-2.188-2.188-1.563 1.563 3.75 3.75 6.25-6.25z" fill="#fff"></path>
   </symbol>
+
+  <symbol id="icon-calendar">
+    <path d="M8.167 2.333v1.167h-2.333c-0.966 0-1.843 0.393-2.474 1.026s-1.026 1.508-1.026 2.474v16.333c0 0.966 0.393 1.843 1.025 2.474s1.509 1.026 2.474 1.026h16.333c0.966 0 1.843-0.393 2.474-1.026s1.026-1.509 1.026-2.474v-16.333c0-0.966-0.393-1.843-1.026-2.474s-1.509-1.026-2.474-1.026h-2.333v-1.167c0-0.644-0.523-1.167-1.167-1.167s-1.167 0.523-1.167 1.167v1.167h-7v-1.167c0-0.644-0.523-1.167-1.167-1.167s-1.167 0.523-1.167 1.167zM23.333 10.5h-18.667v-3.5c0-0.322 0.129-0.612 0.342-0.825s0.503-0.342 0.825-0.342h2.333v1.167c0 0.644 0.523 1.167 1.167 1.167s1.167-0.523 1.167-1.167v-1.167h7v1.167c0 0.644 0.523 1.167 1.167 1.167s1.167-0.523 1.167-1.167v-1.167h2.333c0.322 0 0.613 0.13 0.825 0.342s0.342 0.503 0.342 0.825zM4.667 12.833h18.667v10.5c0 0.322-0.13 0.613-0.342 0.825s-0.503 0.342-0.825 0.342h-16.333c-0.322 0-0.613-0.13-0.825-0.342s-0.342-0.503-0.342-0.825z"></path>
+  </symbol>
+
+  <symbol id="icon-pencil" viewBox="0 0 24 28">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672-1.422 1.422v1.672h2v2h1.672zM13.844 9.5c0-0.203-0.141-0.344-0.344-0.344-0.094 0-0.187 0.031-0.266 0.109l-8.469 8.469c-0.078 0.078-0.109 0.172-0.109 0.266 0 0.203 0.141 0.344 0.344 0.344 0.094 0 0.187-0.031 0.266-0.109l8.469-8.469c0.078-0.078 0.109-0.172 0.109-0.266zM13 6.5l6.5 6.5-13 13h-6.5v-6.5zM23.672 8c0 0.531-0.219 1.047-0.578 1.406l-2.594 2.594-6.5-6.5 2.594-2.578c0.359-0.375 0.875-0.594 1.406-0.594s1.047 0.219 1.422 0.594l3.672 3.656c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+  </symbol>
   
 </svg>
 
@@ -66,6 +74,13 @@
                 </div>
                 <div class="task-input">
                     <input class="task-input__text js-task-text" type="text" placeholder="Add task..." />
+                    <div class="task-deadline">
+                        <label class="task-deadline__label" for="deadline">
+                            Add deadline
+                        </label>
+                        <input class="task-deadline__input js-task-deadline" type="date" id="deadline" name="deadline">
+                        <svg class="task-deadline__icon"><use xlink:href="#icon-calendar"></use></svg>
+                    </div>
                     <div class="toggle">
                         <label class="toggle__label">High priority</label>
                         <input class="toggle__checkbox js-task-priority" type="checkbox" />
@@ -126,6 +141,13 @@
                 <span class="modal__close js-close-modal">
                     <svg class="icon icon--small icon--fill-light-blue2"><use xlink:href="#icon-add"></use></svg>
                 </span>
+            </div>
+            <div class="task-deadline">
+                <label class="task-deadline__label" for="deadline">
+                    Add deadline
+                </label>
+                <input class="task-deadline__input js-task-deadline" type="date" id="deadline" name="deadline">
+                <svg class="task-deadline__icon"><use xlink:href="#icon-calendar"></use></svg>
             </div>
             <textarea class="task-input__text js-task-text" type="text" placeholder="Add task..."></textarea>
             <div class="modal__actions">
