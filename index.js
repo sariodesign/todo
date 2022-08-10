@@ -126,3 +126,11 @@ completeTask.addEventListener("click", () => {
   counterTask(completeList, counterComplete);
   removeSelector(updateTaskModal, 'is-visible');
 });
+
+// Change date label
+taskDeadline.forEach((item) => {
+  item.addEventListener("change", (e) => {
+    deadlineLabel.textContent = e.target.value.split('-').reverse().join('-');
+  })
+});
+
